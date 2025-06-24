@@ -22,7 +22,7 @@ import movies from '../../../movies/filmes'
           keyExtractor={(item) => item.id}
 
           renderItem={({item}) =>(
-            <CardMovies titulo ={item.nome} img ={item.img}> </CardMovies>
+            <CardMovies titulo ={item.nome} img ={item.img} nota={item.nota}> </CardMovies>
           )}
           />
 
