@@ -9,7 +9,9 @@ export default function Detalhes(){
         <View>
             <Text> {route.params.titulo} </Text>
             <Text> {route.params.nota}  </Text>
-            <Image style={{width:180,height:180, marginLeft: 130}} source={{uri: route.params.img}} />
+            <Image style={{width:180,height:180, marginLeft: 130, alignItems:"center",borderRadius:8}} source={{uri: route.params.img}} />
+            <Text> {route.params.descricao} </Text>
         </View>
     )
 }
+
