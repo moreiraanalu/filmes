@@ -7,7 +7,6 @@ import SearchBar from '../../../src/searchBar'
 import CardMovies from "../../../src/cardMovies";
 import movies from '../../../movies/filmes'
 
-
   export default function Home(){
     return(
        <View style ={styles.container}>
