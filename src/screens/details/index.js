@@ -33,7 +33,7 @@ export default function Detalhes() {
 
 const styles = StyleSheet.create({
     container: {
-        backgroundColor: '#f0e9ce',
+        backgroundColor: '#141a29',
         borderRadius: 10,
         flex: 1, 
         justifyContent: 'center',
@@ -41,17 +41,10 @@ const styles = StyleSheet.create({
        
     },
 
-    text:{
-        textAlign: 'center',
-        fontSize: 12,
-        padding: 15,
-        backgroundColor: '#ded2a4',
-        marginTop: 20,
-    },
-
     nota:{
         fontSize: 22,
         textAlign: 'center',
+        color: 'white',
     },
 
     imagem:{
@@ -66,7 +59,7 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         fontSize: 12,
         padding: 15,
-        backgroundColor: '#ded2a4',
+        backgroundColor: '#8ea2d4',
         marginTop: 20,
     },
 
@@ -85,6 +78,7 @@ const styles = StyleSheet.create({
     principal:{
         textAlign: 'center',
         fontSize: 35,
+        color: 'white',
 
     },
 

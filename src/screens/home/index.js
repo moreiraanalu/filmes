@@ -7,7 +7,19 @@ import SearchBar from '../../../src/searchBar'
 import CardMovies from "../../../src/cardMovies";
 import movies from '../../../movies/filmes'
 
+import { useState, useEffect } from "react";
+ 
+
   export default function Home(){
+
+    const [filmes, setFilmes] = useState(['']);
+    useEffect ( () => {
+      async function buscarFilmes(){
+        
+      }
+
+    }, [])
+
     return(
        <View style ={styles.container}>
         <Header></Header>
