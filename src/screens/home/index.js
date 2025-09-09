@@ -6,19 +6,39 @@ import BannerFilmes from '../../../src/bannerFilmes';
 import SearchBar from '../../../src/searchBar'
 import CardMovies from "../../../src/cardMovies";
 import movies from '../../../movies/filmes'
-
 import { useState, useEffect } from "react";
- 
+
 
   export default function Home(){
 
-    const [filmes, setFilmes] = useState(['']);
-    useEffect ( () => {
-      async function buscarFilmes(){
-        
-      }
+    const [filmes, SetMovies ] = useState([]);
 
-    }, [])
+    useEffect(()=> {
+
+      async function buscarFilmes(){
+        const url = 'https://api.themoviedb.org/3/movie/now_playing?language=pt-BR&page=1';
+        const options = {
+          method: 'GET',
+          headers: {
+            accept: 'application/json',
+            Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJiNTdiOWZlNGYyNzUwYjkzNjIxZWRmOGE5MzQ3ZWQ4OSIsIm5iZiI6MTc1NjIyNzA5NS43OTksInN1YiI6IjY4YWRlNjE3NWFkMWNiMDIwMmZhOGRkMiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.Si0EM2i0d3T3l29e5xvQsF3OOZXy8ihQ9i7lXHxueRE'
+          }
+        };
+
+    const response = await fetch(url, options);
+    const data = await response.json();
+
+    console.log(data);
+    SetMovies(data.results);
+
+  }
+
+  buscarFilmes();
+
+
+
+    }, [] )
+
 
     return(
        <View style ={styles.container}>
@@ -28,12 +48,12 @@ import { useState, useEffect } from "react";
 
         <View style = {{width:'90%'}}>
           <FlatList
-          data ={movies}
+          data ={filmes}
           horizontal={true}
           keyExtractor={(item) => item.id}
 
           renderItem={({item}) =>(
-            <CardMovies titulo ={item.nome} img ={item.img} nota={item.nota} descricao={item.descricao}> </CardMovies>
+            <CardMovies titulo ={item.title} img ={item.poster_path} nota={item.vote_average} descricao={item.descricao}> </CardMovies>
           )}
           />
 
