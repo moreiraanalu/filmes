@@ -53,7 +53,7 @@ import { useState, useEffect } from "react";
           keyExtractor={(item) => item.id}
 
           renderItem={({item}) =>(
-            <CardMovies titulo ={item.title} img ={item.poster_path} nota={item.vote_average} descricao={item.descricao}> </CardMovies>
+            <CardMovies titulo ={item.title} img ={item.poster_path} nota={item.vote_average} descricao={item.overview}> </CardMovies>
           )}
           />
 

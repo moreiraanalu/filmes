@@ -25,7 +25,7 @@ export default function Detalhes() {
                 />
             </View>
 
-            <Image style={styles.imagem} source={{ uri: route.params.img }} />
+            <Image style={styles.imagem} source={{ uri: `https://image.tmdb.org/t/p/original${route.params.img} `}} />
             <Text style={styles.text}> {route.params.descricao} </Text>
         </View>
     );
@@ -57,7 +57,7 @@ const styles = StyleSheet.create({
 
     text:{
         textAlign: 'center',
-        fontSize: 12,
+        fontSize: 14,
         padding: 15,
         backgroundColor: '#8ea2d4',
         marginTop: 20,
@@ -81,5 +81,4 @@ const styles = StyleSheet.create({
         color: 'white',
 
     },
-
 });
