@@ -15,4 +15,9 @@ export default function CardMovies({titulo, img, nota, descricao}){
  
         </TouchableOpacity>
     )
+
+
 }
+
+
+
