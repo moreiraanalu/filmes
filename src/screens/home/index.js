@@ -1,5 +1,5 @@
 import { StatusBar} from "react-native";
-import { StyleSheet, Text, View, FlatList } from "react-native";
+import { StyleSheet, Text, View, FlatList, ScrollView } from "react-native";
 
 import Header from "../../../src/header";
 import BannerFilmes from '../../../src/bannerFilmes';
@@ -75,6 +75,8 @@ import { useState, useEffect } from "react";
 
 
     return(
+      <ScrollView>
+
        <View style ={styles.container}>
         <Header></Header>
         <SearchBar></SearchBar>
@@ -112,6 +114,8 @@ import { useState, useEffect } from "react";
 
 
       </View>
+
+      </ScrollView>
 
     );
   }
